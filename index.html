@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>addonzzv — Add-ons para Minecraft</title>
+<meta name="description" content="Baixe add-ons, texturas, mundos e utilitários para Minecraft Bedrock e Java. Curado por addonzzv.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">A</span>
+      <span><span data-site-name>addonzzv</span><small data-tagline>Add-ons para Minecraft</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="active">Início</a>
+      <a href="#addons">Add-ons</a>
+      <a href="#sobre">Sobre</a>
+      <a href="admin/index.html">Admin</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" data-discord href="#" target="_blank" rel="noopener">Discord</a>
+      <a class="btn btn-primary" href="admin/index.html">Publicar</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="badge"><i class="dot"></i><span data-hero-badge>Add-ons Bedrock &amp; Java</span></span>
+    <h1><span data-hero-title>Os melhores add-ons,</span><br><span data-hero-accent>num só lugar.</span></h1>
+    <p data-hero-sub>Aqui o administrador publica os add-ons e a comunidade baixa.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#addons">Explorar add-ons</a>
+      <a class="btn" href="admin/index.html">Painel do admin</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b id="statAddons">0</b><span>Add-ons</span></div>
+      <div class="stat"><b id="statDownloads">0</b><span>Downloads</span></div>
+      <div class="stat"><b id="statCats">0</b><span>Categorias</span></div>
+      <div class="stat"><b id="statVisits">0</b><span>Visitas</span></div>
+    </div>
+  </section>
+
+  <section id="addons">
+    <div class="toolbar">
+      <div class="search">
+        <span>🔍</span>
+        <input type="search" id="searchInput" placeholder="Buscar add-on por nome, autor ou tag...">
+      </div>
+      <select id="editionFilter">
+        <option value="Todas">Edição: Todas</option>
+        <option value="Bedrock">Bedrock</option>
+        <option value="Java">Java</option>
+        <option value="Bedrock e Java">Bedrock e Java</option>
+      </select>
+      <select id="sortSelect">
+        <option value="recent">Mais recentes</option>
+        <option value="downloads">Mais baixados</option>
+        <option value="name">Nome (A-Z)</option>
+      </select>
+      <button class="btn btn-sm" id="clearFilters">Limpar filtros</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty-state" id="emptyState">
+      <div class="ico">📦</div>
+      <h2 id="emptyTitle">Nenhum add-on publicado ainda</h2>
+      <p id="emptyText">Este site começa vazio de propósito: cada add-on é adicionado depois pelo painel do administrador.</p>
+      <a class="btn btn-primary" href="admin/index.html">Ir para o painel do admin</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="panel" style="margin-bottom:56px">
+    <h2>Sobre o addonzzv</h2>
+    <p class="sub">Uma vitrine simples e direta de add-ons para Minecraft, publicada e curada pelo administrador do site.</p>
+    <div class="kv">
+      <div><span>Publicação</span><b>Painel do admin</b></div>
+      <div><span>Plataformas</span><b>Bedrock &amp; Java</b></div>
+      <div><span>Conteúdo</span><b>Add-ons, texturas e mundos</b></div>
+      <div><span>Comunidade</span><b>Discord</b></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-footer>addonzzv — Add-ons para Minecraft.</span>
+    <div class="f-link">
+      <a href="index.html">Início</a>
+      <a href="#addons">Add-ons</a>
+      <a href="admin/index.html">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <img id="modalImg" alt="">
+    <div class="modal-inner" id="modalInner"></div>
+  </div>
+</div>
+
+<script src="assets/store.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
